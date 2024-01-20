@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  backend:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    image: car_rental_be:latest
+    ports:
+      - "3001:3001"
+    networks:
+      - carrentalnetwork
+
+  frontend:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    image: car_rental_fe:latest
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+    networks:
+      - carrentalnetwork
+
+networks:
+  carrentalnetwork:
+    driver: bridge

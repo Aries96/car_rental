@@ -1,0 +1,25 @@
+
+ .nav-link{
+color: black;
+}
+
+.nav-link.active{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.login{
+    height: 100vh;
+}
+.side{
+ background-color: black;
+ height: 100vh;
+ width: 100%;
+ color: #fff;
+ padding-top: 15%;
+ padding-left: 60px;
+}
+
+.fa-trash{
+    cursor: pointer;
+}
